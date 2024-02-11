@@ -225,7 +225,7 @@ typedef QueueHandle_t SemaphoreHandle_t;
  * \ingroup Semaphores
  */
 #if ( configSUPPORT_STATIC_ALLOCATION == 1 )
-    #define xSemaphoreCreateBinaryStatic( pxStaticSemaphore )    xQueueGenericCreateStatic( ( UBaseType_t ) 1, semSEMAPHORE_QUEUE_ITEM_LENGTH, NULL, ( pxStaticSemaphore ), queueQUEUE_TYPE_BINARY_SEMAPHORE )
+    #define xSemaphoreCreateBinaryStatic( pxStaticSemaphore )    xQueueGenericCreateStatic( ( UBaseType_t ) 1, semSEMAPHORE_QUEUE_ITEM_LENGTH, ((uint8_t *)NULL), ( pxStaticSemaphore ), queueQUEUE_TYPE_BINARY_SEMAPHORE )
 #endif /* configSUPPORT_STATIC_ALLOCATION */
 
 /**
